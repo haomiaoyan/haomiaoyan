@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 480" width="1200" height="480" role="img" aria-label="浩渺烟波 — 让复杂，看得见">
+  <defs>
+    <linearGradient id="ts-stage" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#181b23"/><stop offset="1" stop-color="#181b23"/>
+    </linearGradient>
+    <filter id="ts-shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="22"/>
+      <feOffset dy="14"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.5"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <rect id="p" width="10" height="10" rx="2"/>
+    <style>
+      .tl{animation:type-in .8s ease both}
+      .t1{animation-delay:.25s}.t2{animation-delay:1s}.t3{animation-delay:1.8s}
+      @keyframes type-in{from{clip-path:inset(0 100% 0 0)}to{clip-path:inset(0 0 0 0)}}
+      .cursor{animation:blink 1.1s step-end infinite}
+      @keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+      .dot-a{animation:pulse-a 6s ease-in-out infinite}
+      .dot-b{animation:pulse-b 6s ease-in-out infinite}
+      @keyframes pulse-a{0%,100%{opacity:.18}50%{opacity:.55}}
+      @keyframes pulse-b{0%,100%{opacity:.5}50%{opacity:.12}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="480" fill="url(#ts-stage)"/>
+
+  <g filter="url(#ts-shadow)">
+    <rect x="80" y="40" width="1040" height="400" rx="14" fill="#101217"/>
+    <rect x="80" y="40" width="1040" height="38" rx="14" fill="#282c36"/>
+    <rect x="80" y="60" width="1040" height="18" fill="#282c36"/>
+    <line x1="80" y1="78" x2="1120" y2="78" stroke="#0a0c14" stroke-width="0.6"/>
+  </g>
+
+  <g font-family="Consolas, 'Microsoft YaHei', monospace">
+    <circle cx="106" cy="59" r="6" fill="#ff817c"/><circle cx="128" cy="59" r="6" fill="#eed080"/><circle cx="150" cy="59" r="6" fill="#b0dc8a"/>
+    <text x="600" y="65" text-anchor="middle" font-size="17" fill="#b7b9c5">haomiaoyan.exe — 把复杂做成能看见的</text>
+
+    <text x="118" y="123" font-size="20" fill="#b0dc8a">haomiaoyan@earth:~$ ./build-my-world</text>
+    <rect class="cursor" x="566" y="107" width="10" height="20" fill="#b0dc8a"/>
+
+    <text x="115" y="205" font-family="'Microsoft YaHei', 'PingFang SC', 'Noto Sans CJK SC', sans-serif" font-size="58" font-weight="700" fill="#f3eee6">让复杂，看得见。</text>
+    <text x="118" y="246" font-size="20" fill="#acafbb">浩渺烟波 / 把想法做成能点开的东西</text>
+
+    <text class="tl t1" x="118" y="300" font-size="20" fill="#e9e7ec"><tspan fill="#b0dc8a">&gt; </tspan>build --interactive-stories</text>
+    <text class="tl t2" x="118" y="333" font-size="20" fill="#e9e7ec"><tspan fill="#b0dc8a">&gt; </tspan>ship --ai-x-visualization</text>
+    <text class="tl t3" x="118" y="383" font-size="18" fill="#bba5ee">[note] 想法比手快，正在逐个实现。</text>
+
+    <path d="M80 407 H1120" stroke="#333845"/>
+    <text x="118" y="429" font-size="16" fill="#9298aa">CREATIVE CODER / AI × 可视化 / 交互叙事</text>
+    <text x="1080" y="429" text-anchor="end" font-size="16" fill="#b0dc8a">● STILL BUILDING</text>
+  </g>
+
+  <g>
+    <g class="dot-a" fill="#b0dc8a">
+      <use href="#p" x="840" y="150"/><use href="#p" x="874" y="150"/><use href="#p" x="908" y="150"/><use href="#p" x="942" y="150"/><use href="#p" x="976" y="150"/><use href="#p" x="1010" y="150"/>
+      <use href="#p" x="874" y="180"/><use href="#p" x="908" y="180"/><use href="#p" x="942" y="180"/><use href="#p" x="976" y="180"/>
+      <use href="#p" x="908" y="210"/><use href="#p" x="942" y="210"/>
+      <use href="#p" x="874" y="240"/><use href="#p" x="908" y="240"/><use href="#p" x="942" y="240"/><use href="#p" x="976" y="240"/>
+      <use href="#p" x="840" y="270"/><use href="#p" x="874" y="270"/><use href="#p" x="908" y="270"/><use href="#p" x="942" y="270"/><use href="#p" x="976" y="270"/><use href="#p" x="1010" y="270"/>
+    </g>
+    <g class="dot-b" fill="#bba5ee">
+      <use href="#p" x="874" y="180"/><use href="#p" x="1010" y="180"/>
+      <use href="#p" x="840" y="210"/><use href="#p" x="908" y="210"/><use href="#p" x="976" y="210"/><use href="#p" x="1010" y="210"/>
+      <use href="#p" x="874" y="240"/><use href="#p" x="1010" y="240"/>
+      <use href="#p" x="874" y="300"/><use href="#p" x="908" y="300"/><use href="#p" x="942" y="300"/><use href="#p" x="976" y="300"/>
+    </g>
+  </g>
+</svg>
