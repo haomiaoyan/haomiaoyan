@@ -10,6 +10,9 @@
       <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <rect id="p" width="10" height="10" rx="2"/>
+    <rect id="q" width="8" height="8"/>
+    <filter id="ts-hue-a" x="-30%" y="-30%" width="160%" height="160%"><feColorMatrix type="hueRotate" values="150"/></filter>
+    <filter id="ts-hue-b" x="-30%" y="-30%" width="160%" height="160%"><feColorMatrix type="hueRotate" values="300"/></filter>
   </defs>
 
   <rect width="1200" height="480" fill="url(#ts-stage)"/>
@@ -42,21 +45,52 @@
     <text x="1080" y="429" text-anchor="end" font-size="16" fill="#b0dc8a">● STILL BUILDING</text>
   </g>
 
-  <g>
-    <g fill="#b0dc8a">
-      <animate attributeName="opacity" values="0.18;0.55;0.18" dur="6s" repeatCount="indefinite"/>
-      <use href="#p" x="840" y="150"/><use href="#p" x="874" y="150"/><use href="#p" x="908" y="150"/><use href="#p" x="942" y="150"/><use href="#p" x="976" y="150"/><use href="#p" x="1010" y="150"/>
-      <use href="#p" x="874" y="180"/><use href="#p" x="908" y="180"/><use href="#p" x="942" y="180"/><use href="#p" x="976" y="180"/>
-      <use href="#p" x="908" y="210"/><use href="#p" x="942" y="210"/>
-      <use href="#p" x="874" y="240"/><use href="#p" x="908" y="240"/><use href="#p" x="942" y="240"/><use href="#p" x="976" y="240"/>
-      <use href="#p" x="840" y="270"/><use href="#p" x="874" y="270"/><use href="#p" x="908" y="270"/><use href="#p" x="942" y="270"/><use href="#p" x="976" y="270"/><use href="#p" x="1010" y="270"/>
+  <!-- pixel-art typing hands: green + violet, SMIL glitch (GitHub-safe) -->
+  <g id="pixel-typing">
+    <g id="kb-base" fill="#262c37">
+      <rect x="840" y="248" width="176" height="42" rx="4"/>
     </g>
-    <g fill="#bba5ee">
-      <animate attributeName="opacity" values="0.5;0.12;0.5" dur="6s" repeatCount="indefinite"/>
-      <use href="#p" x="874" y="180"/><use href="#p" x="1010" y="180"/>
-      <use href="#p" x="840" y="210"/><use href="#p" x="908" y="210"/><use href="#p" x="976" y="210"/><use href="#p" x="1010" y="210"/>
-      <use href="#p" x="874" y="240"/><use href="#p" x="1010" y="240"/>
-      <use href="#p" x="874" y="300"/><use href="#p" x="908" y="300"/><use href="#p" x="942" y="300"/><use href="#p" x="976" y="300"/>
+    <g id="kb-keys" fill="#3a4150">
+      <use href="#q" x="848" y="254"/><use href="#q" x="860" y="254"/><use href="#q" x="872" y="254"/><use href="#q" x="884" y="254"/><use href="#q" x="896" y="254"/><use href="#q" x="908" y="254"/><use href="#q" x="920" y="254"/><use href="#q" x="932" y="254"/><use href="#q" x="944" y="254"/><use href="#q" x="956" y="254"/><use href="#q" x="968" y="254"/><use href="#q" x="980" y="254"/><use href="#q" x="992" y="254"/>
+      <use href="#q" x="852" y="264"/><use href="#q" x="864" y="264"/><use href="#q" x="876" y="264"/><use href="#q" x="888" y="264"/><use href="#q" x="900" y="264"/><use href="#q" x="912" y="264"/><use href="#q" x="924" y="264"/><use href="#q" x="936" y="264"/><use href="#q" x="948" y="264"/><use href="#q" x="960" y="264"/><use href="#q" x="972" y="264"/><use href="#q" x="984" y="264"/>
+      <use href="#q" x="868" y="274"/><use href="#q" x="880" y="274"/><use href="#q" x="892" y="274"/><use href="#q" x="904" y="274"/><use href="#q" x="916" y="274"/><use href="#q" x="928" y="274"/><use href="#q" x="940" y="274"/><use href="#q" x="952" y="274"/><use href="#q" x="964" y="274"/>
+    </g>
+    <g id="kb-lit" fill="#b0dc8a">
+      <animate attributeName="opacity" values="0.9;0.25;0.9" dur="1.6s" repeatCount="indefinite"/>
+      <use href="#q" x="884" y="254"/><use href="#q" x="936" y="264"/>
+    </g>
+
+    <g id="hand-left" fill="#b0dc8a">
+      <rect x="856" y="192" width="40" height="22" rx="2"/>
+      <rect x="859" y="214" width="8" height="16"/><rect x="870" y="214" width="8" height="21"/><rect x="881" y="214" width="8" height="19"/><rect x="892" y="214" width="8" height="14"/>
+    </g>
+    <g id="hand-right" fill="#bba5ee">
+      <rect x="956" y="192" width="40" height="22" rx="2"/>
+      <rect x="956" y="214" width="8" height="14"/><rect x="967" y="214" width="8" height="19"/><rect x="978" y="214" width="8" height="21"/><rect x="989" y="214" width="8" height="16"/>
+    </g>
+
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0;0 5;0 0" keyTimes="0;0.12;0.25;0.4;0.5" dur="1.3s" repeatCount="indefinite"/>
+      <use href="#hand-left"/>
+    </g>
+    <g>
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 6;0 0" keyTimes="0;0.2;0.32;0.45;0.55" dur="1.3s" repeatCount="indefinite"/>
+      <use href="#hand-right"/>
+    </g>
+
+    <g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;0.85;0;0" keyTimes="0;0.44;0.47;1" dur="9s" repeatCount="indefinite"/>
+      <use href="#hand-left" filter="url(#ts-hue-a)" transform="translate(6 0)"/>
+      <use href="#hand-right" filter="url(#ts-hue-b)" transform="translate(-6 0)"/>
+      <rect x="900" y="190" width="8" height="8" fill="#3ee6ff"/>
+      <rect x="948" y="210" width="8" height="8" fill="#ff4fd8"/>
+      <rect x="940" y="176" width="6" height="6" fill="#c8ff3e"/>
+    </g>
+    <g>
+      <animate attributeName="opacity" calcMode="discrete" values="0;0.8;0;0" keyTimes="0;0.72;0.75;1" dur="9s" repeatCount="indefinite"/>
+      <use href="#hand-left" filter="url(#ts-hue-b)" transform="translate(-5 2)"/>
+      <rect x="872" y="204" width="8" height="8" fill="#ffd23e"/>
+      <rect x="992" y="200" width="8" height="8" fill="#3ee6ff"/>
     </g>
   </g>
 </svg>
