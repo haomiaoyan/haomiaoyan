@@ -13,6 +13,14 @@
     <rect id="q" width="8" height="8"/>
     <filter id="ts-hue-a" x="-30%" y="-30%" width="160%" height="160%"><feColorMatrix type="hueRotate" values="150"/></filter>
     <filter id="ts-hue-b" x="-30%" y="-30%" width="160%" height="160%"><feColorMatrix type="hueRotate" values="300"/></filter>
+    <g id="hand-left" fill="#b0dc8a">
+      <rect x="856" y="192" width="40" height="22" rx="2"/>
+      <rect x="859" y="214" width="8" height="16"/><rect x="870" y="214" width="8" height="21"/><rect x="881" y="214" width="8" height="19"/><rect x="892" y="214" width="8" height="14"/>
+    </g>
+    <g id="hand-right" fill="#bba5ee">
+      <rect x="956" y="192" width="40" height="22" rx="2"/>
+      <rect x="956" y="214" width="8" height="14"/><rect x="967" y="214" width="8" height="19"/><rect x="978" y="214" width="8" height="21"/><rect x="989" y="214" width="8" height="16"/>
+    </g>
   </defs>
 
   <rect width="1200" height="480" fill="url(#ts-stage)"/>
@@ -47,6 +55,26 @@
 
   <!-- pixel-art typing hands: green + violet, SMIL glitch (GitHub-safe) -->
   <g id="pixel-typing">
+    <!-- output tape: characters typed out one by one, then cleared -->
+    <g id="out-base" fill="#333945">
+      <rect x="848" y="162" width="8" height="13"/><rect x="860" y="162" width="8" height="13"/><rect x="872" y="162" width="6" height="13"/><rect x="884" y="162" width="8" height="13"/>
+      <rect x="896" y="162" width="8" height="13"/><rect x="908" y="162" width="6" height="13"/><rect x="920" y="162" width="8" height="13"/><rect x="932" y="162" width="8" height="13"/>
+    </g>
+    <g fill="#b0dc8a">
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.05;1" dur="2.8s" repeatCount="indefinite"/><rect x="848" y="162" width="8" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.16;1" dur="2.8s" repeatCount="indefinite"/><rect x="860" y="162" width="8" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.27;1" dur="2.8s" repeatCount="indefinite"/><rect x="872" y="162" width="6" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.38;1" dur="2.8s" repeatCount="indefinite"/><rect x="884" y="162" width="8" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.49;1" dur="2.8s" repeatCount="indefinite"/><rect x="896" y="162" width="8" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.6;1" dur="2.8s" repeatCount="indefinite"/><rect x="908" y="162" width="6" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.71;1" dur="2.8s" repeatCount="indefinite"/><rect x="920" y="162" width="8" height="13"/></g>
+      <g><animate attributeName="opacity" values="0;1;1" keyTimes="0;0.82;1" dur="2.8s" repeatCount="indefinite"/><rect x="932" y="162" width="8" height="13"/></g>
+    </g>
+    <rect x="945" y="161" width="3" height="15" fill="#bba5ee">
+      <animate attributeName="opacity" values="1;1;0;0;1" keyTimes="0;0.45;0.5;0.95;1" dur="1s" repeatCount="indefinite"/>
+    </rect>
+    <text x="848" y="155" font-family="Consolas, monospace" font-size="9" fill="#6b7383">&gt; output</text>
+
     <g id="kb-base" fill="#262c37">
       <rect x="840" y="248" width="176" height="42" rx="4"/>
     </g>
@@ -55,30 +83,52 @@
       <use href="#q" x="852" y="264"/><use href="#q" x="864" y="264"/><use href="#q" x="876" y="264"/><use href="#q" x="888" y="264"/><use href="#q" x="900" y="264"/><use href="#q" x="912" y="264"/><use href="#q" x="924" y="264"/><use href="#q" x="936" y="264"/><use href="#q" x="948" y="264"/><use href="#q" x="960" y="264"/><use href="#q" x="972" y="264"/><use href="#q" x="984" y="264"/>
       <use href="#q" x="868" y="274"/><use href="#q" x="880" y="274"/><use href="#q" x="892" y="274"/><use href="#q" x="904" y="274"/><use href="#q" x="916" y="274"/><use href="#q" x="928" y="274"/><use href="#q" x="940" y="274"/><use href="#q" x="952" y="274"/><use href="#q" x="964" y="274"/>
     </g>
-    <g id="kb-lit" fill="#b0dc8a">
-      <animate attributeName="opacity" values="0.9;0.25;0.9" dur="1.6s" repeatCount="indefinite"/>
-      <use href="#q" x="884" y="254"/><use href="#q" x="936" y="264"/>
-    </g>
-
-    <g id="hand-left" fill="#b0dc8a">
-      <rect x="856" y="192" width="40" height="22" rx="2"/>
-      <rect x="859" y="214" width="8" height="16"/><rect x="870" y="214" width="8" height="21"/><rect x="881" y="214" width="8" height="19"/><rect x="892" y="214" width="8" height="14"/>
-    </g>
-    <g id="hand-right" fill="#bba5ee">
-      <rect x="956" y="192" width="40" height="22" rx="2"/>
-      <rect x="956" y="214" width="8" height="14"/><rect x="967" y="214" width="8" height="19"/><rect x="978" y="214" width="8" height="21"/><rect x="989" y="214" width="8" height="16"/>
-    </g>
-
+    <!-- key lights: each lights up exactly when its finger strikes -->
     <g fill="#b0dc8a">
-      <animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0;0 5;0 0;0 0" keyTimes="0;0.12;0.25;0.4;0.5;1" dur="1.3s" repeatCount="indefinite"/>
-      <rect x="856" y="192" width="40" height="22" rx="2"/>
-      <rect x="859" y="214" width="8" height="16"/><rect x="870" y="214" width="8" height="21"/><rect x="881" y="214" width="8" height="19"/><rect x="892" y="214" width="8" height="14"/>
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.08;0.2;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="860" y="254"/>
+    </g>
+    <g fill="#b0dc8a">
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.33;0.45;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="872" y="254"/>
+    </g>
+    <g fill="#b0dc8a">
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.58;0.7;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="884" y="254"/>
+    </g>
+    <g fill="#b0dc8a">
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.8;0.92;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="896" y="254"/>
     </g>
     <g fill="#bba5ee">
-      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 6;0 0;0 0" keyTimes="0;0.2;0.32;0.45;0.55;1" dur="1.3s" repeatCount="indefinite"/>
-      <rect x="956" y="192" width="40" height="22" rx="2"/>
-      <rect x="956" y="214" width="8" height="14"/><rect x="967" y="214" width="8" height="19"/><rect x="978" y="214" width="8" height="21"/><rect x="989" y="214" width="8" height="16"/>
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.18;0.3;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="956" y="254"/>
     </g>
+    <g fill="#bba5ee">
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.43;0.55;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="968" y="254"/>
+    </g>
+    <g fill="#bba5ee">
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.68;0.8;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="980" y="254"/>
+    </g>
+    <g fill="#bba5ee">
+      <animate attributeName="opacity" values="0;1;0;0" keyTimes="0;0.88;0.98;1" dur="1.4s" repeatCount="indefinite"/>
+      <use href="#q" x="992" y="254"/>
+    </g>
+
+    <!-- palms stay still -->
+    <rect x="856" y="192" width="40" height="22" rx="2" fill="#b0dc8a"/>
+    <rect x="956" y="192" width="40" height="22" rx="2" fill="#bba5ee"/>
+    <!-- 8 fingers strike independently, phase-shifted; strike = translate down then back -->
+    <g fill="#b0dc8a"><animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 0" keyTimes="0;0.08;0.2;1" dur="1.4s" repeatCount="indefinite"/><rect x="859" y="214" width="8" height="16"/></g>
+    <g fill="#b0dc8a"><animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0;0 0" keyTimes="0;0.33;0.45;1" dur="1.4s" repeatCount="indefinite"/><rect x="870" y="214" width="8" height="21"/></g>
+    <g fill="#b0dc8a"><animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0;0 0" keyTimes="0;0.58;0.7;1" dur="1.4s" repeatCount="indefinite"/><rect x="881" y="214" width="8" height="19"/></g>
+    <g fill="#b0dc8a"><animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0;0 0" keyTimes="0;0.8;0.92;1" dur="1.4s" repeatCount="indefinite"/><rect x="892" y="214" width="8" height="14"/></g>
+    <g fill="#bba5ee"><animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 0" keyTimes="0;0.18;0.3;1" dur="1.4s" repeatCount="indefinite"/><rect x="956" y="214" width="8" height="14"/></g>
+    <g fill="#bba5ee"><animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0;0 0" keyTimes="0;0.43;0.55;1" dur="1.4s" repeatCount="indefinite"/><rect x="967" y="214" width="8" height="19"/></g>
+    <g fill="#bba5ee"><animateTransform attributeName="transform" type="translate" values="0 0;0 6;0 0;0 0" keyTimes="0;0.68;0.8;1" dur="1.4s" repeatCount="indefinite"/><rect x="978" y="214" width="8" height="21"/></g>
+    <g fill="#bba5ee"><animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 0" keyTimes="0;0.88;0.98;1" dur="1.4s" repeatCount="indefinite"/><rect x="989" y="214" width="8" height="16"/></g>
 
     <g>
       <animate attributeName="opacity" calcMode="discrete" values="0;0.85;0;0" keyTimes="0;0.44;0.47;1" dur="9s" repeatCount="indefinite"/>
