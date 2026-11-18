@@ -69,13 +69,15 @@
       <rect x="956" y="214" width="8" height="14"/><rect x="967" y="214" width="8" height="19"/><rect x="978" y="214" width="8" height="21"/><rect x="989" y="214" width="8" height="16"/>
     </g>
 
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0;0 5;0 0" keyTimes="0;0.12;0.25;0.4;0.5" dur="1.3s" repeatCount="indefinite"/>
-      <use href="#hand-left"/>
+    <g fill="#b0dc8a">
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 8;0 0;0 5;0 0;0 0" keyTimes="0;0.12;0.25;0.4;0.5;1" dur="1.3s" repeatCount="indefinite"/>
+      <rect x="856" y="192" width="40" height="22" rx="2"/>
+      <rect x="859" y="214" width="8" height="16"/><rect x="870" y="214" width="8" height="21"/><rect x="881" y="214" width="8" height="19"/><rect x="892" y="214" width="8" height="14"/>
     </g>
-    <g>
-      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 6;0 0" keyTimes="0;0.2;0.32;0.45;0.55" dur="1.3s" repeatCount="indefinite"/>
-      <use href="#hand-right"/>
+    <g fill="#bba5ee">
+      <animateTransform attributeName="transform" type="translate" values="0 0;0 7;0 0;0 6;0 0;0 0" keyTimes="0;0.2;0.32;0.45;0.55;1" dur="1.3s" repeatCount="indefinite"/>
+      <rect x="956" y="192" width="40" height="22" rx="2"/>
+      <rect x="956" y="214" width="8" height="14"/><rect x="967" y="214" width="8" height="19"/><rect x="978" y="214" width="8" height="21"/><rect x="989" y="214" width="8" height="16"/>
     </g>
 
     <g>
